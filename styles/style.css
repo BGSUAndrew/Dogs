@@ -5,11 +5,14 @@ html {
     color:#EAE2CC;
 }
 
+a {
+    color: #B66D38;
+}
+
 #app {
     display: flex;
     justify-content: center;
 }
-
 
 .img-fluid {
     max-width: 100%;
