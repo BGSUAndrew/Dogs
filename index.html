@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Dog of the Day</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<div id="title">
+    <h1 class="text-center">Dog of the Day</h1>
+</div>
+<div id="app">
+    <div class="dog-container">
+        <img class="img-fluid" :src='dog' alt="dog">
+        <p>Click refresh to see a new dog</p>
+    </div>
+</div>
+<div class="footer">
+    <p>Project by Andrew O'Connor. Data provided by the Dog API and dog.ceo.</p>
+    <p>Project to-dos
+        <ul>
+            <li>Add a list of breeds</li>
+            <li>Add random image selection based on breed</li>
+            <li>Add color theme toggle</li>
+        </ul>
+    </p>
+</div>
+
+
+<script>
+  const { createApp } = Vue
+  createApp({
+    data() {
+      return {
+        dog: null
+      }
+    },
+    mounted() {
+        axios
+            .get('https://dog.ceo/api/breeds/image/random')
+            .then(response => (this.dog = response.data.message))
+    }
+  }).mount('#app')
+</script>
+
+</html>
