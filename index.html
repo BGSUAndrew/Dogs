@@ -14,6 +14,32 @@
         <br>
         <button class="new_dog_button" @click="getDog">Get New Dog Photo</button>
     </div>
+
+  
+</div>
+<div class="summer-switch-wrapper">
+  <label class="summer-switch" for="checkbox">
+      <input type="checkbox" id="checkbox" />
+</label>
+<em>Summer Theme</em>
+<br>
+<div class="fall-switch-wrapper">
+  <label class="fall-switch" for="checkbox">
+      <input type="checkbox" id="checkbox" />
+</label>
+<em>Fall Theme</em>
+<br>
+<div class="winter-switch-wrapper">
+  <label class="winter-switch" for="checkbox">
+      <input type="checkbox" id="checkbox" />
+</label>
+<em>Winter Theme</em>
+<br>
+<div class="spring-switch-wrapper">
+  <label class="spring-switch" for="checkbox">
+      <input type="checkbox" id="checkbox" />
+</label>
+<em>Spring Theme</em>
 </div>
 <div class="footer">
     <p>Project by Andrew O'Connor. Data provided by the <a href="https://dog.ceo/dog-api/about">Dog API and dog.ceo</a>.</p>
@@ -48,6 +74,51 @@
       }
     }
   }).mount('#app')
+
+  
+const summerToggleSwitch = document.querySelector('.summer-switch input[type="checkbox"]');
+function summerSwitchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'summer');
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'default');
+    }    
+}
+summerToggleSwitch.addEventListener('change', summerSwitchTheme, false);
+
+const fallToggleSwitch = document.querySelector('.fall-switch input[type="checkbox"]');
+function fallSwitchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'fall');
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'default');
+    }    
+}
+fallToggleSwitch.addEventListener('change', fallSwitchTheme, false);
+
+const winterToggleSwitch = document.querySelector('.winter-switch input[type="checkbox"]');
+function winterSwitchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'winter');
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'default');
+    }    
+}
+winterToggleSwitch.addEventListener('change', winterSwitchTheme, false);
+
+const springToggleSwitch = document.querySelector('.spring-switch input[type="checkbox"]');
+function springSwitchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'spring');
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'default');
+    }    
+}
+springToggleSwitch.addEventListener('change', springSwitchTheme, false);
 </script>
 
 </html>

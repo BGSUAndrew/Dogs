@@ -1,12 +1,43 @@
+:root {
+    --primary-color: #1C4046;
+    --secondary-color: #EAE2CC;
+    --tertiary-color: #B66D38;
+}
+
+[data-theme="summer"] {
+    --primary-color: #DBC436;
+    --secondary-color: #2E208C;
+    --tertiary-color:  #8C7C12;
+}
+
+[data-theme="fall"] {
+    --primary-color: #593828;
+    --secondary-color: #D95B21;
+    --tertiary-color: #DF8B64;
+}
+
+[data-theme="winter"] {
+    --primary-color: #1B4359;
+    --secondary-color: #43A8DF;
+    --tertiary-color: #006DA7;
+}
+
+[data-theme="spring"] {
+    --primary-color: #0E8C22;
+    --secondary-color: #BF00D9;
+    --tertiary-color: #D9CD0B;
+}
+
+
 html {
     padding: 1rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #1C4046;
-    color:#EAE2CC;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 a {
-    color: #B66D38;
+    color: var(--tertiary-color);
 }
 
 #app {
@@ -24,10 +55,10 @@ a {
 }
 
 .new_dog_button {
-    background-color: #1C4046;
-    color:#EAE2CC;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     font-size: 2rem;
-    border: 2px solid #EAE2CC;
+    border: 2px solid var(--secondary-color);
     margin-left: auto;
     margin-right: auto;
     display: block;
