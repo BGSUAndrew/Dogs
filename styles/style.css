@@ -22,3 +22,14 @@ a {
 .text-center {
     text-align: center;
 }
+
+.new_dog_button {
+    background-color: #1C4046;
+    color:#EAE2CC;
+    font-size: 2rem;
+    border: 2px solid #EAE2CC;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 2rem;
+}
